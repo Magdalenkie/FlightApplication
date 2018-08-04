@@ -11,7 +11,7 @@ public class LogicOfApp {
         airportMap = airportDataBase();
     }
 
-    // throw an exception if airport does not exist
+
 
     public boolean findFlight(Flight flight) throws RouteNotFoundException {
         return findAirport(flight.getArrivalAirport()) && findAirport(flight.getDepartureAirport());
@@ -22,7 +22,7 @@ public class LogicOfApp {
             return airportMap.get(airportName);
         }else{
             throw new RouteNotFoundException("Airport does not exist!");
-        }
+        }// throw an exception if airport does not exist
     }
 
     private Map<String, Boolean> airportDataBase() {
